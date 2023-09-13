@@ -23,7 +23,6 @@
     margin-top: 0px;
     margin-bottom: 5px;
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: white;
 }
@@ -35,7 +34,6 @@
     background-color: #1AA2B0;
     border-radius: 64px;
     font-size: 10px;
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: white;
     line-height: 1.5;
@@ -45,7 +43,6 @@
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
     color: inherit;
 }
 
@@ -53,13 +50,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 32px;
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: white;
 }
 
 .product-card p {
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
     color: white;
 }
