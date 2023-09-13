@@ -7,7 +7,6 @@
 .product-image {
     object-fit: cover;
     width: 286px;
-    height: 151px;
     margin-right: 20px;
     border: 1px solid #1AA2B0;
     border-radius: 10px;
@@ -19,6 +18,7 @@
 }
 
 .product-card h1 {
+    display: flex;
     justify-content: space-between;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -29,17 +29,16 @@
 }
 
 .product-card h1 span {
+    height: 15px;
     margin-bottom: 0px;
-    margin-left: 136px;
-    padding: 0 7px;
+    padding: 0 8px;
     background-color: #1AA2B0;
     border-radius: 64px;
     font-size: 10px;
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    line-height: 14px;
+    font-weight: 600;
     color: white;
-    text-align: right;
+    line-height: 1.5;
 }
 
 .product-card h2 {
