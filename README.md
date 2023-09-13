@@ -1,6 +1,4 @@
-# Diligent Robotics Challenge
-
-#### Frontend Engineer Take Home Assessment
+# Diligent Robotics
 
 ## Description
 
@@ -15,7 +13,6 @@ _A single page application that allows a user to display details about products.
 ## To test this project
 
 * Run npm test: `npm test`
-
 Launches the test runner in the interactive watch mode.
 
 ## Known Bugs
