@@ -11,10 +11,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div className="product-card">
       <img src={product.thumbnail} alt={product.title} className="product-image" />
       <div className="product-details">
-        <h2>{product.title}</h2>
-        <span>{product.category}</span>
-        <h3>{product.brand}</h3>
-        <h4>${product.price}</h4>
+        <h1>
+          {product.title} <span>{product.category}</span>
+        </h1>
+        <h2>{product.brand}</h2>
+        <h3>${product.price}.00</h3>
         <p>{product.description}</p>
       </div>
     </div>
