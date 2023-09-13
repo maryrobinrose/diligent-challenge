@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../api';
 import './ProductDropdown.css';
 
@@ -8,22 +8,35 @@ interface ProductDropdownProps {
 }
 
 const ProductDropdown: React.FC<ProductDropdownProps> = ({ products, onSelect }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const productId = parseInt(e.target.value, 10);
-    const selectedProduct = products.find((product) => product.id === productId) || null;
-    onSelect(selectedProduct);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSelect = (product: Product) => {
+    setSelectedProduct(product);
+    setIsOpen(false);
+    onSelect(product);
   };
 
   return (
-    <div className="dropdown-container">
-      <select id="productDropdown" onChange={handleChange} className="dropdown">
-        <option value="">Select a product</option>
-        {products.map((product) => (
-          <option key={product.id} value={product.id}>
-            {product.title}
-          </option>
-        ))}
-      </select>
+    <div className={`dropdown ${isOpen ? 'open' : ''}`} onClick={handleToggle}>
+      <div className="dropdown-list">
+          {selectedProduct ? selectedProduct.title : 'Select a product'}
+      </div>
+        <div className={`options ${isOpen ? 'show' : ''}`}>
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="option"
+              onClick={() => handleSelect(product)}
+            >
+              {product.title}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
