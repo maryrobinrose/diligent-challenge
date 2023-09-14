@@ -10,7 +10,7 @@
     margin-right: 20px;
     border: 1px solid #1AA2B0;
     border-radius: 10px;
-}
+}    
 
 .product-details {
     flex: 1;
@@ -20,7 +20,7 @@
 .product-card h1 {
     display: flex;
     justify-content: space-between;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 600;
@@ -43,6 +43,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
+    font-weight: 400;
     color: inherit;
 }
 
